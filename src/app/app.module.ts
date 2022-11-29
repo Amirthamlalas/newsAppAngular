@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchNewsComponent } from './search-news/search-news.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 const myroute:Routes=[
 
@@ -38,7 +39,8 @@ const myroute:Routes=[
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(myroute)
+    RouterModule.forRoot(myroute),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
