@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ViewNewsComponent } from './view-news/view-news.component';
 import { AddNewsComponent } from './add-news/add-news.component';
 import { FormsModule } from '@angular/forms';
+import { SearchNewsComponent } from './search-news/search-news.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewNewsComponent,
-    AddNewsComponent
+    AddNewsComponent,
+    SearchNewsComponent
   ],
   imports: [
     BrowserModule,
