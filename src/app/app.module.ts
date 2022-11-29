@@ -7,18 +7,38 @@ import { ViewNewsComponent } from './view-news/view-news.component';
 import { AddNewsComponent } from './add-news/add-news.component';
 import { FormsModule } from '@angular/forms';
 import { SearchNewsComponent } from './search-news/search-news.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myroute:Routes=[
+
+  {
+    path:"",
+    component:ViewNewsComponent
+  },
+  {
+    path:"add",
+    component:AddNewsComponent
+  },
+  {
+    path:"search",
+    component:SearchNewsComponent
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewNewsComponent,
     AddNewsComponent,
-    SearchNewsComponent
+    SearchNewsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(myroute)
   ],
   providers: [],
   bootstrap: [AppComponent]
